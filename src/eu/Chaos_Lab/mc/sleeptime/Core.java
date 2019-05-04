@@ -7,7 +7,12 @@ public class Core extends JavaPlugin {
     @Override
     public void onEnable(){
         System.out.println("SLEEPTIME: START");
-		System.out.println("Sleep goood");
+
+        registerEvents();
+    }
+
+    public void registerEvents(){
+        getServer().getPluginManager().registerEvents(new SchlafHandler(), this);
     }
 
     @Override
